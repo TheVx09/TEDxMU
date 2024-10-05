@@ -1,0 +1,381 @@
+
+body
+{
+    background-image: radial-gradient(circle at top right, rgba(62, 52, 124, 0.57),1%, black);
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*MENU THINGS*/
+.menu
+{
+    margin: 3vw;
+}
+
+.menu a button
+{
+    float: right;
+
+    margin-top: 10px;
+    margin-right: 5%;
+
+    border-radius: 15px;
+    border-color: transparent;
+
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    
+    padding: 10px;
+}
+
+
+#Menu_button
+{
+    background-color: transparent;
+    color: white;
+    transition: color 1s;
+
+}
+
+#Menu_button:hover
+{
+    color: red;
+}
+
+#Tickets_button
+{
+    color: white;
+    background-color: rgb(206, 0, 0);
+    transition: background-color 1s;
+}
+
+#Tickets_button:hover
+{
+    background-color: gray;
+}
+
+/*Heading THINGS*/
+
+
+.heading_text
+{
+    margin-top: 20vh;
+    margin-left: 10vw;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.heading_text img
+{
+    float: right;
+    margin-right: 10vw;
+    position: relative;
+    margin-top: -5%;
+
+    width: 30vw;
+    height: 30vw;
+}
+
+.heading_text .text_heading h1{
+    color: whitesmoke;
+    font-family: 'Roboto';
+    font-size: 500%;
+
+    margin: 0;
+}
+
+.heading_text .text_heading h3{
+    color: whitesmoke;
+    font-family: sans-serif;
+    font-size: larger;
+    font-weight: 100;
+}
+
+.heading_text .text_heading button
+{   
+    border-width: 2px;
+    border-radius: 15px;
+
+    padding: 2%;
+    margin-top: 2vh;
+    margin-left: 1%;
+
+    border-color: whitesmoke;
+    background-color: transparent;
+    color: whitesmoke;
+
+    transition: background-color 1s;
+}
+
+.heading_text .text_heading button:hover
+{
+    background-color: red;
+}
+
+/*Middle text THINGS*/
+.wuttedx
+{
+    margin-bottom: 30vh;
+}
+
+.wuttedx .title
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 15vh;
+    font-family: 'Roboto';
+
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+
+}
+
+.wuttedx .title h1
+{
+    color: whitesmoke;
+    margin-top: 20vh;
+    font-size: 3.5vw;
+}
+
+.wuttedx .title #text_tedx
+{
+    margin-left: 10px;
+    color: red;
+    font-size: 3.5vw;
+
+}
+
+.wuttedx p
+{
+    color: whitesmoke;
+    font-size: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 200%;
+
+    padding-left: 20%;
+    padding-right: 20%;
+    
+}
+
+.wuttedx #wutexp
+{
+    margin-top: 2%;
+    margin-left: 15%;
+    font-size: 90%;
+}
+
+/*CREATIVE TEAM INFO*/
+.ted_cre
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20%;
+}
+
+.ted_cre h1{
+    color: whitesmoke;
+    font-size: 400%;
+    font-family: 'Roboto';
+    margin-left: 10%;
+}
+
+.ted_cre h2{
+    position: relative;
+    color: rgb(255, 0, 0);
+    font-size: 400%;
+    font-family: 'Roboto';
+    margin-left: -3%;
+    margin-top: 3.1%;
+}
+
+.ted_cre p{
+    color: whitesmoke;
+    font-size: 100%;
+    font-family: 'Roboto';
+    line-height: 200%;
+
+    padding-left: 20%;
+    padding-right: 10%;
+    margin-top: 3%;
+}
+
+/*IMG SLIDER*/
+.wrapper {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+
+.wrapper .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% /3));
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: 0;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel :where(.card, .img) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+
+.carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+}
+
+.carousel .card {
+    width: 80%;
+    height: auto;
+    scroll-snap-align: start;
+    list-style: none;
+    background: transparent;
+    display: flex;
+    cursor: pointer;
+    padding-bottom: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 15px;
+}
+
+.card .img {
+    background: black;
+    border-radius: 15px;
+
+}
+
+.card .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 15px;
+}
+
+.card h2 {
+    font-weight: 500;
+    font-size: 1.56rem;
+    margin: 30px 0 5px;
+    color: whitesmoke;
+    font-family: 'Roboto'
+}
+
+.card span {
+    color: #6a6d78;
+    font-size: 1.31rem;
+    font-family: 'Roboto';
+
+}
+
+@media screen and (max-width: 900px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper .carousel {
+        grid-auto-columns: 100%;
+
+    }
+}
+
+
+/*END CREADITS AAHHHHH*/
+.end_links
+{
+    background-color: #0000006b;
+    padding-bottom: 1%;
+}
+
+.end_links .on_line
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.end_links .on_line a img
+{
+    margin-left: 30px;
+}
+
+.end_links .on_line a
+{
+    color: whitesmoke;
+    font-family: sans-serif;
+    margin-right: 2%;
+    margin-top: 20px;
+}
+
+.end_links .links
+{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.end_links .links a img
+{
+    filter: invert(100%);
+    width: 30px;
+    margin-left: 50px;
+    transition: color 3s;
+}
+
+.end_links .links a img:hover
+{
+    background-color: cyan;
+    border-radius: 50%;
+    border-width: 60px;
+}
+
+.end_links p
+{
+    color: gainsboro;
+    font-family: 'Roboto';
+    font-size: 10px;
+    text-align: center;
+    margin-left: 3%;
+}
+
+@keyframes appear {
+    
+}
