@@ -7,6 +7,42 @@ body
     background-attachment: fixed;
 }
 
+
+/*loader*/
+#loader_wrapper
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(rgb(28, 25, 45), black);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes loader_anim {
+    from{
+        width: 20%;
+        height: auto;
+    }
+    to{
+        width: 30%;
+        height: auto;
+    }
+}
+
+#loader_wrapper img
+{
+    width: 30%;
+    height: auto;
+    animation-name: loader_anim;
+    animation-duration: 10s;
+}
+
+
 @keyframes appear {
     from {
         opacity: 0;

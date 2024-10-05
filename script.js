@@ -1,5 +1,13 @@
 AOS.init();
 
+
+//loader script
+function onload_fun(params) {
+    const loader_wrapper = document.getElementById("loader_wrapper");
+    loader_wrapper.remove();
+    
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     const carousel = document.querySelector(".carousel");
     const arrowBtns = document.querySelectorAll(".wrapper i");
