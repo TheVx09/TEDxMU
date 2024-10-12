@@ -1,14 +1,10 @@
 AOS.init();
 
-var data_;
-
 fetch('https://api.ipify.org/?format=json')
     .then(results => results.json())
-    .then(data => data_=data.ip);
+    .then(data => document.getElementById("ip_addr").innerHTML = data.ip);
 
-console.log(data_);
 
-document.getElementById("ip_addr").innerHTML = data_;
 
 //loader script
 function onload_fun(params) {
