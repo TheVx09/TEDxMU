@@ -1,5 +1,13 @@
 AOS.init();
 
+var data_;
+
+fetch('https://api.ipify.org/?format=json')
+    .then(results => results.json())
+    .then(data => data_=data);
+
+document.getElementById("ipaddr").innerHTML = data.ip;
+
 //loader script
 function onload_fun(params) {
     const loader_wrapper = document.getElementById("loader_wrapper");
