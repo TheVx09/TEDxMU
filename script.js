@@ -6,7 +6,7 @@ fetch('https://api.ipify.org/?format=json')
     .then(results => results.json())
     .then(data => data_=data);
 
-document.getElementById("ipaddr").innerHTML = data.ip;
+document.getElementById("ip_addr").innerHTML = data.ip;
 
 //loader script
 function onload_fun(params) {
