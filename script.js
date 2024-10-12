@@ -4,9 +4,9 @@ var data_;
 
 fetch('https://api.ipify.org/?format=json')
     .then(results => results.json())
-    .then(data => data_=data);
+    .then(data => data_=data.ip);
 
-document.getElementById("ip_addr").innerHTML = data.ip;
+document.getElementById("ip_addr").innerHTML = data;
 
 //loader script
 function onload_fun(params) {
